@@ -1,0 +1,8 @@
+dist/
+bin/
+node_modules/
+app/libs/
+.tmp/
+.sass-cache/
+*~
+app/css/

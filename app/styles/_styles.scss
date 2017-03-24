@@ -1,0 +1,339 @@
+// @import "variable.scss";
+
+// html , body , .view-height{
+//     height: 100%;
+// }
+
+// .inner-content {
+//     margin: 0 auto;
+//     padding: 45px 12px;
+// }
+
+// .text-form {
+//     text-transform: capitalize;
+// }
+
+// .wrap {
+// 	width: 100%;
+//     height: 217px;
+//     content: "";
+//     background-image: url("/img/dashboard-image.jpg");
+//     left: 0;
+//     right: 0;
+//     top: 0;
+//     z-index: 0;
+//     background-size: cover;
+//     background-position: center;
+// }
+
+// .app-heading {
+// 	font-family: Verdana, Helvetica, Arial, sans-serif;
+//     margin: 0px;
+//     color: #EBEBEB;
+// }
+
+// .nav-bar {
+// 	background-color: white;
+//     padding: 15px 30px 25px 0px;
+//     margin-top: 30px;
+// }
+
+// .nav-options {
+//     border-bottom: 1px solid transparent;
+// }
+
+// ul.nav-options {
+//     width: 100%;
+//     height: 90%;
+//     list-style-type: none;
+//     margin: 0px;
+//     padding: 0px;
+//     display: -webkit-flex;
+//     -webkit-flex-direction: row;
+
+//     display: flex;
+//     flex-direction: row;
+// }
+
+// ul.nav-options > li {
+//     text-align: center;
+//     flex-grow: 1;
+// }
+
+// .dashboard-table {
+//     background-color: #ECF0F1;
+//     min-height: 100%;
+// }
+// .table-content {
+//     margin: 0 auto;
+//     max-width: 1300px;
+//     padding: 30px 12px;
+// }
+
+// .table-heading {
+//     margin-bottom: 5px;
+// }
+// .table-heading span {
+//     font-size: 25px;
+// }
+// .topic-table {
+//     background-color: white;
+//     border-radius: 4px;
+//     box-shadow: -8px 11px 16px 0px rgba(0, 0, 0, 0.75);
+// }
+// .table-header {
+//     background-color: #26BCB5;
+//     color: $white;
+// }
+
+// .app-container {
+//     background-color:#26BCB5;
+//     padding: 70px 0;
+//     height: 100%;
+//     h2 {
+//         text-align: center;
+//     }
+//     button {
+//         left: 38%;
+//         position: relative;
+//     }
+// }
+// .app-box-content {
+//     background-color: white;
+//     padding: 30px 15px;
+//     box-shadow: -8px 11px 16px 0px rgba(0,0,0,0.75);
+//     font-family: "Times New Roman", Times, serif;
+//     margin: 0px 0px 20px 0px;
+// }
+// .app-box-content p:nth-of-type(1) {
+//     text-align: center;
+// }
+
+// .success-message {
+//     background-color: #DEF0D8;
+//     color: #547651;
+//     padding: 10px;
+//     border-radius: 5px;
+// }
+
+// .validation-message {
+//     text-align: center;
+//     span {
+//         background-color: #ffe5e5;
+//         color: #ff0000;
+//         padding: 10px;
+//         border-radius: 5px;
+//         display: block;
+//     }
+// }
+
+// .app-box-content input {
+//     width: 100%;
+//     height: 40px;
+//     border-radius: 4px;
+//     border: 1px solid;
+//     padding-left: 10px;
+// }
+
+// .app-box-content textarea {
+//     width: 100%;
+//     height: 100px;
+//     border-radius: 4px;
+//     border: 1px solid;
+//     padding-left: 10px;
+// }
+
+// .app-box-content button {
+//     padding: 10px 25px;
+//     margin-top: 10px;
+//     text-transform: uppercase;
+// }
+
+// .topic-details h4 {
+//     margin: 0px;
+//     color: #111;
+//     font-weight: normal;
+// }
+
+// .topic-details p{
+//     color: #aaa;
+//     width: 250px;
+//     white-space: nowrap;
+//     overflow: hidden;
+//     text-overflow: ellipsis;
+// }
+
+// .topic-details span{
+//     color: #7089a9;
+// }
+
+// .topic-date {
+//     padding-left: 15px;
+// }
+
+// .logout a {
+//     padding-left: 5px;
+// }
+
+// .discussion-details {
+//     background-color: #26BCB5;
+//     min-height: 100%;
+// }
+
+// .discuss-title{
+//     margin: 0;
+//     font-weight: normal;
+//     position: relative;
+//     margin-bottom: 6px;
+//     padding-bottom: 15px;
+//     border-bottom: 2px solid #eee;
+//     margin-left: 0px !important;
+//     margin-right: 0px !important;
+// }
+
+// .discuss-title div:nth-of-type(2) {
+//     margin-top: -8px;
+// }
+
+// .discuss-title p:nth-of-type(1) {
+//     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+//     font-size: 25px;
+// }
+
+// .discuss-title p {
+//     margin: 0px;
+// }
+
+// .discuss-title p:nth-of-type(3) {
+//     color: #aaa;
+// }
+
+// .discuss-title p:nth-of-type(2) {
+//     color: #7089a9;
+// }
+
+// .discuss-info {
+//     font-family: "Lucida Console", Monaco, monospace;
+//     font-size: 16px;
+//     width: 100%;
+//     word-wrap: break-word;
+// }
+
+// .profile-image{
+//     width: 64px;
+//     height: 64px;
+//     border-radius: 64px;
+//     margin-right: 5px;
+// }
+
+// .inner-container {
+//     background-color: white;
+//     padding: 10px;
+//     border: 1px solid #ccc;
+//     box-shadow: -8px 11px 16px 0px rgba(0, 0, 0, 0.75);
+// }
+
+// .discuss-info span{
+//     word-spacing: 3px;
+// }
+
+// .comment-button {
+//     margin-top: 25px;
+// }
+
+// .comment-area{
+//     width: 100%;
+//     height: 100px;
+//     border: 2px solid #d9d9d9;
+// }
+
+// .comment-user{
+
+// }
+
+// .comment-info p{
+//     margin: 0px;
+// }
+
+// .comment-info p:nth-of-type(1){
+//     color: #7089a9;
+// }
+
+// .comment-info p:nth-of-type(2){
+//     color: #ccc;
+// }
+
+// .comment-info p:nth-of-type(3){
+//     font-family: "Times New Roman", Times, serif;
+//     color: $black;
+// }
+
+// .comment-container {
+//     width: 50%;
+//     margin: 15px 0px;
+// }
+
+// .comment-section {
+//     margin: 15px 10px;
+// }
+
+// .img-style {
+//     width: 60px;
+//     height: auto;
+//     border: 1px solid $black;
+//     border-radius: 34px;    
+// }
+
+// .user-info {
+//     span {
+//         @extend .text-form;
+//     }
+//     img {
+//         @extend .img-style;
+//     }
+// }
+
+// table > tbody > tr > td, th {
+//     vertical-align: middle !important;
+// }
+
+// .username-style {
+//     color: #EBEBEB;
+//     margin: 0px 10px;
+//     text-align: right
+// }
+
+// [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+//   display: none !important;
+// }
+
+// .dashboard-warning {
+//     text-align: center;
+//     font-size: 20px;
+//     color: #ff2500;
+//     display: block;
+// }
+
+// .active a {
+//     color: $white !important;
+//     background-color: #337ab7;
+//     padding: 10px;
+//     border-radius: 14px;
+// }
+
+// a[disabled="disabled"] {
+//     cursor: not-allowed;
+//     color: #A9A9A9 !important;
+//     text-decoration: none !important;
+// }
+
+// .fs-22 {
+//     font-size: 22px;
+//     i {
+//         padding: 10px;
+//     }
+// }
+
+// .profile-section {
+//     margin-right: 20px;
+// }

@@ -1,0 +1,58 @@
+<!doctype html>
+<html ng-app="playlistMaker">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Playlist Maker</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="favicon.ico" />
+
+  <!-- build:css styles/vendor.css -->
+  <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.css" />
+  <!--<link rel="stylesheet" href="libs/animate.css/animate.min.css">-->
+  <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+  <!-- endbuild -->
+
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="css/app.css" />
+  <link rel="stylesheet" href="css/vendor.css" />
+  <!-- endbuild -->
+</head>
+
+<body ng-controller="MainController" ng-cloak>
+  <section>
+    <div class="nav-container">
+      <h1 class="app-heading">Playlist Maker</h1>
+      <div class="user-info">
+        <span ng-if="currUsrActive" class="text-form username-style">Hi {{currentUser.name}}</span>
+        <button ng-if="!currUsrActive" class="btn btn-default">Login</button>
+        <button ng-if="currUsrActive" class="btn btn-default">Logout</button>
+        <button ng-if="!currUsrActive" class="btn btn-primary">Signup</button>
+      </div>
+    </div>
+  </section>
+  <div ng-view class="view-height"></div>
+
+
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="libs/jquery/dist/jquery.js"></script>
+  <script src="libs/angular/angular.js"></script>
+  <script src="libs/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="libs/angular-route/angular-route.js"></script>
+  <script src="libs/ngstorage/ngStorage.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js scripts/main.js -->
+  <script src="js/app.js"></script>
+  <script src="js/services/mainServices.js"></script>
+  <script src="js/directives/mainDirectives.js"></script>
+  <script src="js/controllers/mainController.js"></script>
+  <script src="js/controllers/userController.js"></script>
+  <!-- endbuild -->
+
+</body>
+
+</html>

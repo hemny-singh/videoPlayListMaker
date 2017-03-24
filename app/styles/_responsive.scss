@@ -1,0 +1,24 @@
+@media only screen and (max-width: 480px) {
+    .app-heading {
+        font-size: 24px;
+    }
+   
+    ul.nav-options {
+    	flex-direction:column;
+    }
+    .nav-bar {
+    	padding: 5px 0;
+        margin-top: 4px;
+    }
+    .topic-details p {
+    	width: 70px;
+    }
+    .comment-container {
+    	width: 75%;
+    }
+
+    .active a {
+        padding: 2px 3px;
+        border-radius: 5px;
+    }
+}

@@ -1,0 +1,28 @@
+<form role="form" class="app-container">
+  <div class="inner-content">
+    <div class="row main-form animated bounce">
+      <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 app-box-content">
+        <h2 class="text-form">{{signMode}}</h2>
+        <div class="form-group" ng-if="signMode==='register'">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="name" ng-model="userObj.name" placeholder="Enter your name here" required="true">
+        </div>
+        <div class="form-group">
+          <label for="email">Email address:</label>
+          <input type="email" class="form-control" id="email" ng-model="userObj.email"
+          placeholder="email@example.com" required="true">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input type="password" class="form-control" id="pwd" placeholder="Enter you password" required="true" ng-model="userObj.password">
+        </div>
+        <p class="validation-message">
+          <span class="animated bounceIn" ng-if="showError">
+            {{errorMessage}}
+          </span>
+        </p>
+        <button type="submit" class="btn btn-primary" ng-click="saveUser()">{{signMode}}</button>
+      </div>
+    </div>
+  </div>
+</form>

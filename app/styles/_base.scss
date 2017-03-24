@@ -1,0 +1,20 @@
+@import "variable.scss";
+
+html , body , .view-height{
+  min-height: 100vh;
+  widows: 100vw;
+  background: $body-background;
+}
+
+.nav-container {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  .app-heading {
+    margin: 0;
+    color: $heading-text-color;
+  }
+  .user-info {
+    color: $heading-text-color;
+  }
+}

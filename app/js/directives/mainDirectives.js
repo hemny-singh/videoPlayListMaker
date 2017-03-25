@@ -1,5 +1,4 @@
 // This is a directive for modal dialog. This handles the hide and show functionality of modal as per user action
-// This is used for comment section of this project
 playlistMakerApp
     .directive('playlistModal', function() {
         return {

@@ -1,6 +1,7 @@
-@import "variable.scss";
+@import "variable";
 
 html , body {
+  font-family: Roboto;
   min-height: 100vh;
   background: $body-background;
 }
@@ -16,6 +17,8 @@ input[type="text"], input[type="number"] {
 
 .view-height {
   height: calc(100vh - 102px);
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 
 .full-height {
@@ -26,6 +29,12 @@ input[type="text"], input[type="number"] {
   padding: 10px 15px;
   display: flex;
   justify-content: space-between;
+  min-height: 58px;
+  background: $white-color;
+  box-shadow: 0px 3px 7px 0px $border-color;
+  border-radius: 0;
+  z-index: 10;
+  border-color: $white-color;
   .app-heading {
     margin: 0;
     color: $heading-text-color;

@@ -15,13 +15,6 @@ playlistMakerApp
       location.reload();
     };
 
-    $scope.createTopic = function() {
-      if ($scope.currUsrActive) {
-        $location.path('/');
-      } else {
-        $scope.showModal = true;
-      }
-    };
 
     $scope.openRegisterPage = function(mode) {
       if(mode) {

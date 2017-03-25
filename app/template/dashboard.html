@@ -2,7 +2,8 @@
   <div class="row full-height">
     <div class="col-md-3 left-nav">
       <div class="title-div">
-        <span>{{currentUser.name}}'s Playlist</span>
+        <span ng-if="currentUser.name">{{currentUser.name}}'s Playlist</span>
+        <span ng-if="!currentUser.name">No Playlist</span>
         <button class="btn btn-primary" ng-click="playYourPlaylist()"
           ng-class="{disabled: !userPlayList.length}">Play</button>
       </div>
@@ -15,26 +16,28 @@
     <div class="col-md-9 main-view">
       <div class="add-playlist-btn">
         <button class="btn btn-primary" ng-click="savePlaylist(false)">Reset Playlist</button>
-        <button class="btn btn-primary" ng-click="createYourPlaylist()">Add Playlist</button>
+        <button class="btn btn-success" ng-class="{disabled: !currentUser.name}"
+          ng-click="createYourPlaylist()">Add Playlist</button>
       </div>
       <div class="video-player" ng-if="!showCompletedMessage && currentVideo.title">
         <h3>{{currentVideo.title}}</h3>
         <iframe id="ytplayer" type="text/html" width="720" height="405"
           ng-src="{{trustSrc(currentVideo.url)}}"
           frameborder="0" allowfullscreen></iframe>
-        <span>Views: {{currentVideo.views}}</span>
+        <h3>Views: {{currentVideo.views}}</h3>
       </div>
       <div ng-if="showCompletedMessage">
         <h2>You have watched the entire library. </h2>
         <p>Add More songs to your play list
-          <button class="btn btn-primary" ng-click="createYourPlaylist()">Add Playlist</button>
+          <button class="btn btn-success" ng-click="createYourPlaylist()">Add Playlist</button>
           Or
           <button class="btn btn-primary" ng-click="playYourPlaylist()"
-          ng-class="{disabled: !userPlayList.length}">Play</button>
+          ng-class="{disabled: !userPlayList.length}">Play Again</button>
         </p>
       </div>
       <div ng-if="!showCompletedMessage && !currentVideo.title">
         <h3>Hi! welcome to playlist Maker.</h3>
+        <h3 ng-if="!currentUser.name">Please login to create playlist</h3>
         <p>
           You can create your playlist here. You can mention the start time and end time of your video and skip the boring part of videos. 
         </p>
@@ -47,9 +50,9 @@
       <div class="playlist-modal-form">
         <input type="text" placeholder="Add Video URL" ng-model="playlistObj.url" required="true"/>
         <input type="text" placeholder="Add Title" ng-model="playlistObj.title" required="true"/>
-        <input type="number" placeholder="Add Video Start time" ng-model="playlistObj.startTime" required="true"/>
-        <input type="number" placeholder="Add Video end time" ng-model="playlistObj.endTime" required="true"/>
-        <p ng-if="formError">Plese fill all the required fields</p>
+        <input type="number" placeholder="Add Video Start time in seconds" ng-model="playlistObj.startTime" required="true"/>
+        <input type="number" placeholder="Add Video end time in seconds" ng-model="playlistObj.endTime" required="true"/>
+        <p ng-if="formError">Plese fill all the required fields. All the fields are required and start time should be less than end time</p>
       </div>
     </playlist-modal-body>
     <playlist-modal-footer>

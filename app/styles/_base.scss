@@ -5,8 +5,17 @@ html , body {
   background: $body-background;
 }
 
+input[type="text"], input[type="number"] {
+  padding: 9px;
+  width: 100%;
+  margin: 3px 0;
+  border: 1px solid $border-color;
+  border-radius: 3px;
+  border-style: double;
+}
+
 .view-height {
-  height: calc(100vh - 59px);
+  height: calc(100vh - 102px);
 }
 
 .full-height {
@@ -28,11 +37,19 @@ html , body {
 
 .left-nav {
   height: 100%;
-  margin-left: -15px;
-  .left-nav-playlist {
+  .title-div {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
     background: $white-color;
+    span {
+      font-size: 22px;
+    }
+  }
+  .left-nav-playlist {
     height: 100%;
     margin-bottom: 0;
+    background: $white-color;
   }
 }
 
@@ -40,5 +57,9 @@ html , body {
   height: 100%;
   .add-playlist-btn {
     float: right;
+  }
+  .video-player {
+    min-width: 250px;
+    min-height: 250px;
   }
 }

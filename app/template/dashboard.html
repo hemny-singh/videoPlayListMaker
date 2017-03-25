@@ -1,6 +1,10 @@
 <section class="full-height container-fluid">
   <div class="row full-height">
     <div class="col-md-3 left-nav">
+      <div class="title-div">
+        <span>{{currentUser.name}}'s Playlist</span>
+        <button class="btn btn-primary" ng-click="playYourPlaylist()">Play</button>
+      </div>
       <ul class="left-nav-playlist">
         <li ng-repeat="obj in userPlayList">
           {{obj.title}}
@@ -11,6 +15,12 @@
       <div class="add-playlist-btn">
         <button class="btn btn-primary" ng-click="createYourPlaylist()">Add Playlist</button>
       </div>
+      <div class="video-player">
+        <h3>{{currentVideo.title}}</h3>
+        <iframe id="ytplayer" type="text/html" width="720" height="405"
+          ng-src="{{trustSrc(currentVideo.url)}}"
+          frameborder="0" allowfullscreen></iframe>
+      </div>
     </div>
   </div>
   <playlist-modal visible="showPlayListModal" on-shown="showModal()" on-hide="hideModal()">
@@ -20,7 +30,7 @@
         <input type="text" placeholder="Add Video URL" ng-model="playlistObj.url" required="true"/>
         <input type="text" placeholder="Add Title" ng-model="playlistObj.title" required="true"/>
         <input type="number" placeholder="Add Video Start time" ng-model="playlistObj.startTime"/>
-        <input type="nuber" placeholder="Add Video end time" ng-model="playlistObj.endTime"/>
+        <input type="number" placeholder="Add Video end time" ng-model="playlistObj.endTime"/>
       </div>
     </playlist-modal-body>
     <playlist-modal-footer>

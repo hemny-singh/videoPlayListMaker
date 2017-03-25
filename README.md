@@ -32,6 +32,7 @@ Using localstorage to save user and their playlist as server code is not added.
 
 ### To run server locally
 1. Run ```gulp server```
+2. Open [http://localhost:8000](http://localhost:8000) in your browser..
 
 
 ### Additional commands

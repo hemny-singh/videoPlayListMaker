@@ -15,8 +15,8 @@
   <!-- endbuild -->
 
   <!-- build:css styles/main.css -->
-  <link rel="stylesheet" href="css/app.css" />
   <link rel="stylesheet" href="css/vendor.css" />
+  <link rel="stylesheet" href="css/app.css" />
   <!-- endbuild -->
 </head>
 
@@ -26,9 +26,9 @@
       <h1 class="app-heading">Playlist Maker</h1>
       <div class="user-info">
         <span ng-if="currUsrActive" class="text-form username-style">Hi {{currentUser.name}}</span>
-        <button ng-if="!currUsrActive" class="btn btn-default">Login</button>
-        <button ng-if="currUsrActive" class="btn btn-default">Logout</button>
-        <button ng-if="!currUsrActive" class="btn btn-primary">Signup</button>
+        <a ng-if="!currUsrActive" class="btn btn-default" href="/#/user:login">Login</a>
+        <a ng-if="currUsrActive" class="btn btn-default" ng-click="logoutFun()">Logout</a>
+        <a ng-if="!currUsrActive" class="btn btn-primary" href="/#/user:register">Signup</a>
       </div>
     </div>
   </section>
@@ -51,6 +51,8 @@
   <script src="js/directives/mainDirectives.js"></script>
   <script src="js/controllers/mainController.js"></script>
   <script src="js/controllers/userController.js"></script>
+  <script src="js/controllers/dashboardController.js"></script>
+  
   <!-- endbuild -->
 
 </body>

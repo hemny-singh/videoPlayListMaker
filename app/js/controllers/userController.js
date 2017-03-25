@@ -10,14 +10,15 @@ playlistMakerApp
     param = $routeParams.params.split(":");
     $scope.signMode = param[1];
 
+
     // validation of register and login form
-      function validation(data, type) {
-        if (type === "register") {
-            return (data.email && data.name && data.password);
-        } else {
-            return (data.email && data.password);
-        }
-      } 
+    function validation(data, type) {
+      if (type === "register") {
+          return (data.email && data.name && data.password);
+      } else {
+          return (data.email && data.password);
+      }
+    } 
 
     //This function handles the login and register part of the project and the data is being stored in localstorage
     $scope.saveUser = function() {
@@ -42,11 +43,10 @@ playlistMakerApp
             location.reload();
       } else if ($scope.signMode === "login") {
         if (allUserObj && allUserObj.hasOwnProperty($scope.userObj.email)) {
-          if (allUserObj[$scope.userObj.email].password === 
-            $scope.userObj.password) {
-                      playlistService.saveParentObj("currentUser", allUserObj[$scope.userObj.email]);
-                      $location.path("/");
-                      location.reload();
+          if (allUserObj[$scope.userObj.email].password === $scope.userObj.password) {
+              playlistService.saveParentObj("currentUser", allUserObj[$scope.userObj.email]);
+              $location.path("/");
+              location.reload();
           } else {
             $scope.errorMessage = "Wrong password";
             $scope.showError = true;

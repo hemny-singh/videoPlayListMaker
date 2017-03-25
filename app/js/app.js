@@ -15,7 +15,7 @@ playlistMakerApp.config(function($routeProvider, $locationProvider) {
   $routeProvider
     .when('/', {
       templateUrl: '/template/dashboard.html',
-      controller: 'dashboardController'
+      controller: 'DashboardController'
     })
     .when('/user:params', {
       templateUrl: '/template/user.html',

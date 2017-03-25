@@ -1,9 +1,16 @@
 @import "variable.scss";
 
-html , body , .view-height{
+html , body {
   min-height: 100vh;
-  widows: 100vw;
   background: $body-background;
+}
+
+.view-height {
+  height: calc(100vh - 59px);
+}
+
+.full-height {
+  height: 100%;
 }
 
 .nav-container {
@@ -16,5 +23,22 @@ html , body , .view-height{
   }
   .user-info {
     color: $heading-text-color;
+  }
+}
+
+.left-nav {
+  height: 100%;
+  margin-left: -15px;
+  .left-nav-playlist {
+    background: $white-color;
+    height: 100%;
+    margin-bottom: 0;
+  }
+}
+
+.main-view {
+  height: 100%;
+  .add-playlist-btn {
+    float: right;
   }
 }

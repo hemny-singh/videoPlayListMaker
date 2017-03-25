@@ -1,3 +1,31 @@
-<section class="dashboard-table">
-  test
+<section class="full-height container-fluid">
+  <div class="row full-height">
+    <div class="col-md-3 left-nav">
+      <ul class="left-nav-playlist">
+        <li ng-repeat="obj in userPlayList">
+          {{obj.title}}
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-9 main-view">
+      <div class="add-playlist-btn">
+        <button class="btn btn-primary" ng-click="createYourPlaylist()">Add Playlist</button>
+      </div>
+    </div>
+  </div>
+  <playlist-modal visible="showPlayListModal" on-shown="showModal()" on-hide="hideModal()">
+    <playlist-modal-header title="Add Playlist"></playlist-modal-header>
+    <playlist-modal-body>
+      <div class="playlist-modal-form">
+        <input type="text" placeholder="Add Video URL" ng-model="playlistObj.url" required="true"/>
+        <input type="text" placeholder="Add Title" ng-model="playlistObj.title" required="true"/>
+        <input type="number" placeholder="Add Video Start time" ng-model="playlistObj.startTime"/>
+        <input type="nuber" placeholder="Add Video end time" ng-model="playlistObj.endTime"/>
+      </div>
+    </playlist-modal-body>
+    <playlist-modal-footer>
+      <button class="btn btn-primary"  ng-click="savePlaylist()">Save</button>
+      <button class="btn btn-default"  ng-click="hideModal()">Cancel</button>
+    </playlist-modal-footer>
+  </playlist-modal>
 </section>

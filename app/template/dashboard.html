@@ -17,11 +17,27 @@
         <button class="btn btn-primary" ng-click="savePlaylist(false)">Reset Playlist</button>
         <button class="btn btn-primary" ng-click="createYourPlaylist()">Add Playlist</button>
       </div>
-      <div class="video-player">
+      <div class="video-player" ng-if="!showCompletedMessage && currentVideo.title">
         <h3>{{currentVideo.title}}</h3>
         <iframe id="ytplayer" type="text/html" width="720" height="405"
           ng-src="{{trustSrc(currentVideo.url)}}"
           frameborder="0" allowfullscreen></iframe>
+        <span>Views: {{currentVideo.views}}</span>
+      </div>
+      <div ng-if="showCompletedMessage">
+        <h2>You have watched the entire library. </h2>
+        <p>Add More songs to your play list
+          <button class="btn btn-primary" ng-click="createYourPlaylist()">Add Playlist</button>
+          Or
+          <button class="btn btn-primary" ng-click="playYourPlaylist()"
+          ng-class="{disabled: !userPlayList.length}">Play</button>
+        </p>
+      </div>
+      <div ng-if="!showCompletedMessage && !currentVideo.title">
+        <h3>Hi! welcome to playlist Maker.</h3>
+        <p>
+          You can create your playlist here. You can mention the start time and end time of your video and skip the boring part of videos. 
+        </p>
       </div>
     </div>
   </div>

@@ -21,6 +21,7 @@ Using localstorage to save user and their playlist as server code is not added.
 ### Angular Conventions
 * Directive to add generic template code or DOM manipulation.
 * Services to write the generic logic to set and get the data.
+* Controllers have business logic and view binding code.
 * Teardown the listeners before controllers are destroyed.
 
 

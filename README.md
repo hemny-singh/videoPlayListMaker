@@ -1,3 +1,27 @@
+# About Project
+
+Simple project to make your own playlist. Which has following features: 
+* User can add multiple YouTube videos to their playlist by providing youtube id, url, start time, end time, title.
+* Video plays automatically once current one ends.
+* Muliple user support.
+
+## Solution
+
+Using localstorage to save user and their playlist as server code is not added.
+
+### Tech stack
+
+* AngularJS
+* HTML5
+* SASS
+* Youtue iframe API
+* gulp
+* npm and bower
+
+### Angular Conventions
+* Directive to add generic template code or DOM manipulation.
+* Services to write the generic logic to set and get the data.
+* Teardown the listeners before controllers are destroyed.
 
 
 ### To setup local environment
@@ -13,4 +37,5 @@
 ### Additional commands
 1. Run ```gulp``` to make dist directory
 2. Run ```gulp scripts``` to lint all javascript files
+
 

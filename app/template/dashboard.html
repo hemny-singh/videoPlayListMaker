@@ -3,7 +3,8 @@
     <div class="col-md-3 left-nav">
       <div class="title-div">
         <span>{{currentUser.name}}'s Playlist</span>
-        <button class="btn btn-primary" ng-click="playYourPlaylist()">Play</button>
+        <button class="btn btn-primary" ng-click="playYourPlaylist()"
+          ng-class="{disabled: !userPlayList.length}">Play</button>
       </div>
       <ul class="left-nav-playlist">
         <li ng-repeat="obj in userPlayList">
@@ -13,6 +14,7 @@
     </div>
     <div class="col-md-9 main-view">
       <div class="add-playlist-btn">
+        <button class="btn btn-primary" ng-click="savePlaylist(false)">Reset Playlist</button>
         <button class="btn btn-primary" ng-click="createYourPlaylist()">Add Playlist</button>
       </div>
       <div class="video-player">
@@ -29,12 +31,13 @@
       <div class="playlist-modal-form">
         <input type="text" placeholder="Add Video URL" ng-model="playlistObj.url" required="true"/>
         <input type="text" placeholder="Add Title" ng-model="playlistObj.title" required="true"/>
-        <input type="number" placeholder="Add Video Start time" ng-model="playlistObj.startTime"/>
-        <input type="number" placeholder="Add Video end time" ng-model="playlistObj.endTime"/>
+        <input type="number" placeholder="Add Video Start time" ng-model="playlistObj.startTime" required="true"/>
+        <input type="number" placeholder="Add Video end time" ng-model="playlistObj.endTime" required="true"/>
+        <p ng-if="formError">Plese fill all the required fields</p>
       </div>
     </playlist-modal-body>
     <playlist-modal-footer>
-      <button class="btn btn-primary"  ng-click="savePlaylist()">Save</button>
+      <button class="btn btn-primary"  ng-click="savePlaylist(true)">Save</button>
       <button class="btn btn-default"  ng-click="hideModal()">Cancel</button>
     </playlist-modal-footer>
   </playlist-modal>

@@ -72,3 +72,63 @@ input[type="text"], input[type="number"] {
     min-height: 250px;
   }
 }
+
+.notification {
+  width: 288px;
+  margin-left: 37px;
+  color: $n-text-color;
+  font-size: 0.9em;
+  .note {
+    font-size: 12px;
+    font-style: italic;
+    color: $question-color;
+    font-weight: bold;
+  }
+}
+
+.n-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+
+  .dollar-input {
+    position: absolute;
+    font-size: 17px;
+    padding: 10px 5px;
+  }
+  > input[type='number'] {
+    width: 50%;
+    margin: 0;
+    padding: 14px;
+    padding-left: 17px;
+    font-weight: bold;
+  }
+
+  > .pay-btn {
+    width: 50%;
+    margin: 0;
+    margin-left: 15px;
+  }
+}
+
+.inner-container {
+  border: 1px solid $border-color;
+  padding: 15px;
+  background-color: $white-color;
+}
+
+.progress-bar-div {
+  height: 10px;
+  width: 100%;
+  border: 1px solid $border-color;
+  overflow: hidden;
+  .progress-bar-val {
+    background-color: $red-color;
+    height: 10px;
+  }
+}
+
+
+.warning {
+  color: $red-color;
+}

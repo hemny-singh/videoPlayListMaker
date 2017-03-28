@@ -1,0 +1,21 @@
+<div class="notification">
+  <div class="progress-bar-div"
+    data-toggle="tooltip" data-placement="top" title="${{progressBarMessage}}">
+    <div class="progress-bar-val" ng-style="{'width': progressBar+'%'}"></div>
+  </div>
+  <div class="inner-container">
+    <p><strong class="warning">Only 3 days left</strong> to fund this project.</p>
+    <p>Join the <strong>42</strong> donors who have already supported this project. Every dollar helps.</p>
+    <div class="n-container">
+      <span class="dollar-input">$</span>
+      <input type="number"
+        ng-model="moneyToPay" ng-change="checkPendingMoney(moneyToPay)"/>
+      <button class="btn btn-success pay-btn" ng-click="dummyFunction()">Give Now</button>
+    </div>
+    <p class="note">Why give <span>{{moneyToPay}}</span>?</p>
+  </div>
+  <div class="n-container">
+    <button class="btn btn-default" ng-click="dummyFunction()">Save For Later</button>
+    <button class="btn btn-default" ng-click="dummyFunction()">Tell your friends</button>
+  </div>
+</div>
